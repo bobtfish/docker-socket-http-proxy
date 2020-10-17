@@ -1,9 +1,10 @@
 FROM nginx:1.7
 ENV DEBIAN_FRONTEND noninteractive
 
-ADD nginx.conf /etc/nginx.conf
+ADD nginx.conf /etc/nginx/nginx.conf
+USER root
 
-EXPOSE 4242
+EXPOSE 2375
 
-CMD ["/usr/local/sbin/nginx"]
+CMD ["/usr/sbin/nginx"]
 
